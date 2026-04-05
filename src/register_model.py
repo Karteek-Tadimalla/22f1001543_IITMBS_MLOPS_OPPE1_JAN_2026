@@ -1,7 +1,10 @@
 import argparse
 import json
 import mlflow
+import os
 
+tracking_uri = os.environ.get("MLFLOW_TRACKING_URI", "mlruns")
+mlflow.set_tracking_uri(tracking_uri)
 
 def main():
     ap = argparse.ArgumentParser()

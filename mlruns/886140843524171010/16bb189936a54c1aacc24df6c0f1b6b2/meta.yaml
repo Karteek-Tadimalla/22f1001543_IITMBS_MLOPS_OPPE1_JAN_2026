@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/16bb189936a54c1aacc24df6c0f1b6b2/artifacts
+end_time: 1775395232384
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: 16bb189936a54c1aacc24df6c0f1b6b2
+run_name: welcoming-stag-205
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775395222539
+status: 3
+tags: []
+user_id: karteek_tadimalla

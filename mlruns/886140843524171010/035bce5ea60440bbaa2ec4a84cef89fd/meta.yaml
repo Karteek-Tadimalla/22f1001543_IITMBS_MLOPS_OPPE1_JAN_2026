@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/035bce5ea60440bbaa2ec4a84cef89fd/artifacts
+end_time: 1775395455648
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: 035bce5ea60440bbaa2ec4a84cef89fd
+run_name: bemused-lark-208
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775395439372
+status: 3
+tags: []
+user_id: karteek_tadimalla

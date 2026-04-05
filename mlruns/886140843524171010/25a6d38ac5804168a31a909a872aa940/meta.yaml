@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/25a6d38ac5804168a31a909a872aa940/artifacts
+end_time: 1775395274362
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: 25a6d38ac5804168a31a909a872aa940
+run_name: overjoyed-skink-168
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775395263048
+status: 3
+tags: []
+user_id: karteek_tadimalla

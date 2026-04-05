@@ -1,84 +1,63 @@
-# src/ci_evaluate.py
-import argparse
+import os
 import json
-from pathlib import Path
-
-import mlflow.pyfunc
+import mlflow
 import pandas as pd
-from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, roc_auc_score
+from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 
-
-FEATURE_COLS = ["rolling_avg_10", "volume_sum_10", "stock_name"]
-
+TEST_PATH = "data/processed/v0/test.parquet"
+OUT_MD = "reports/ci_metrics.md"
+OUT_JSON = "reports/ci_metrics.json"
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--test_path", required=True)
-    ap.add_argument("--model_uri", required=True)
-    ap.add_argument("--metrics_out", required=True)
-    ap.add_argument("--report_out", required=True)
-    ap.add_argument("--preds_out", required=True)
-    args = ap.parse_args()
+    os.makedirs("reports", exist_ok=True)
 
-    df = pd.read_parquet(args.test_path).dropna(subset=["target"]).copy()
-    X = df[FEATURE_COLS]
-    y = df["target"].astype(int)
+    df = pd.read_parquet(TEST_PATH)
+    y = df["target"]
+    X = df.drop(columns=["target"])
 
-    model = mlflow.pyfunc.load_model(args.model_uri)
-    probas = model.predict(X)
+    tracking_uri = os.environ.get("MLFLOW_TRACKING_URI", "mlruns")
+    mlflow.set_tracking_uri(tracking_uri)
 
-    if hasattr(probas, "shape") and len(getattr(probas, "shape", [])) > 1:
-        if probas.shape[1] >= 2:
-            probas = probas[:, 1]
+    runs = mlflow.search_runs(
+        search_all_experiments=True,
+        order_by=["metrics.f1_score DESC"],
+    )
 
-    probas = pd.Series(probas).astype(float).values
-    preds = (probas >= 0.5).astype(int)
+    if runs.empty:
+        raise RuntimeError("No MLflow runs found when searching with tracking URI "
+                           f"{mlflow.get_tracking_uri()}")
+
+    best_run = runs.iloc[0]
+    best_run_id = best_run["run_id"]
+
+    model_uri = f"runs:/{best_run_id}/model"
+    model = mlflow.pyfunc.load_model(model_uri)
+
+    preds = model.predict(X)
+
+    accuracy = accuracy_score(y, preds)
+    f1 = f1_score(y, preds)
+    precision = precision_score(y, preds)
+    recall = recall_score(y, preds)
 
     metrics = {
-        "accuracy": float(accuracy_score(y, preds)),
-        "precision": float(precision_score(y, preds, zero_division=0)),
-        "recall": float(recall_score(y, preds, zero_division=0)),
-        "f1": float(f1_score(y, preds, zero_division=0)),
-        "roc_auc": float(roc_auc_score(y, probas)),
-        "rows_evaluated": int(len(df)),
+        "best_run_id": best_run_id,
+        "accuracy": accuracy,
+        "f1_score": f1,
+        "precision": precision,
+        "recall": recall,
     }
 
-    Path(args.metrics_out).parent.mkdir(parents=True, exist_ok=True)
-    with open(args.metrics_out, "w") as f:
+    with open(OUT_JSON, "w") as f:
         json.dump(metrics, f, indent=2)
 
-    out_df = df.copy()
-    out_df["prediction_proba"] = probas
-    out_df["prediction"] = preds
-    out_df.to_parquet(args.preds_out, index=False)
-
-    report = f"""# CML Report
-
-## Test metrics
-
-- Accuracy: {metrics['accuracy']:.4f}
-- Precision: {metrics['precision']:.4f}
-- Recall: {metrics['recall']:.4f}
-- F1: {metrics['f1']:.4f}
-- ROC-AUC: {metrics['roc_auc']:.4f}
-- Rows evaluated: {metrics['rows_evaluated']}
-
-## Model source
-
-- Model URI: `{args.model_uri}`
-
-## Feature set
-
-- rolling_avg_10
-- volume_sum_10
-- stock_name
-"""
-
-    with open(args.report_out, "w") as f:
-        f.write(report)
-
-    print(report)
-
+    with open(OUT_MD, "w") as f:
+        f.write("# CI Evaluation Report\n\n")
+        f.write(f"- Best run id: `{best_run_id}`\n")
+        f.write(f"- Accuracy: `{accuracy:.4f}`\n")
+        f.write(f"- F1 score: `{f1:.4f}`\n")
+        f.write(f"- Precision: `{precision:.4f}`\n")
+        f.write(f"- Recall: `{recall:.4f}`\n")
 
 if __name__ == "__main__":
     main()

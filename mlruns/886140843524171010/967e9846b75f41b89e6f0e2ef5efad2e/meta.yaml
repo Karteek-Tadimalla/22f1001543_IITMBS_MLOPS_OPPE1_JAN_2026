@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/967e9846b75f41b89e6f0e2ef5efad2e/artifacts
+end_time: 1775395185780
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: 967e9846b75f41b89e6f0e2ef5efad2e
+run_name: unleashed-turtle-261
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775395176988
+status: 3
+tags: []
+user_id: karteek_tadimalla

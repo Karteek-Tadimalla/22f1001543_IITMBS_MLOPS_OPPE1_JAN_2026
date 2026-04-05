@@ -15,6 +15,13 @@ from sklearn.impute import SimpleImputer
 from sklearn.metrics import accuracy_score, f1_score, roc_auc_score, precision_score, recall_score
 from xgboost import XGBClassifier
 
+import os
+import mlflow
+
+tracking_uri = os.environ.get("MLFLOW_TRACKING_URI", "mlruns")
+mlflow.set_tracking_uri(tracking_uri)
+
+
 FEATURE_COLS = ["rolling_avg_10", "volume_sum_10", "stock_name"]
 
 

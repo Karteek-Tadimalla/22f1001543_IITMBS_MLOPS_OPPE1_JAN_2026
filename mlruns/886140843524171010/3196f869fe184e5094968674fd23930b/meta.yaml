@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/3196f869fe184e5094968674fd23930b/artifacts
+end_time: 1775395439370
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: 3196f869fe184e5094968674fd23930b
+run_name: spiffy-newt-670
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775395423081
+status: 3
+tags: []
+user_id: karteek_tadimalla

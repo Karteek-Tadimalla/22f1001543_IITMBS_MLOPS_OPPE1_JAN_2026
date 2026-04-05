@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/0/a92d5ea7b791475bb434b945b58b6fbd/artifacts
+end_time: 1775395061252
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a92d5ea7b791475bb434b945b58b6fbd
+run_name: debug_run
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775395061237
+status: 3
+tags: []
+user_id: karteek_tadimalla

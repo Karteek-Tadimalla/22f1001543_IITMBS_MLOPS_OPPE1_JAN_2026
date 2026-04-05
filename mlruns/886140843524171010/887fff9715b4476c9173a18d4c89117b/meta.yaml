@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/887fff9715b4476c9173a18d4c89117b/artifacts
+end_time: 1775395473438
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: 887fff9715b4476c9173a18d4c89117b
+run_name: mysterious-fish-669
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775395455651
+status: 3
+tags: []
+user_id: karteek_tadimalla

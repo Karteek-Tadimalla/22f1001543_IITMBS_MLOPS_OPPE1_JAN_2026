@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/3300cc4897bc4003bf8218caa9b82c8e/artifacts
+end_time: 1775395406668
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: 3300cc4897bc4003bf8218caa9b82c8e
+run_name: overjoyed-skunk-534
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775395391201
+status: 3
+tags: []
+user_id: karteek_tadimalla

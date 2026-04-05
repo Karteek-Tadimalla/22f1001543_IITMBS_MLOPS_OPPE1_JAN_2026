@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/6eea3dab72664bfb999b7eb5217927c7/artifacts
+end_time: 1775395242091
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: 6eea3dab72664bfb999b7eb5217927c7
+run_name: skillful-sheep-333
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775395232387
+status: 3
+tags: []
+user_id: karteek_tadimalla

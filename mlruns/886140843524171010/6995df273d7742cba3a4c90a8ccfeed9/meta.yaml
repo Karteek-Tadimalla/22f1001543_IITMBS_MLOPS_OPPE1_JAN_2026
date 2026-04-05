@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/6995df273d7742cba3a4c90a8ccfeed9/artifacts
+end_time: 1775395251758
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: 6995df273d7742cba3a4c90a8ccfeed9
+run_name: adventurous-kit-646
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775395242093
+status: 3
+tags: []
+user_id: karteek_tadimalla
