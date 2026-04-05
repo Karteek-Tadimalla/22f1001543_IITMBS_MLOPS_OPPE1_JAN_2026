@@ -1,0 +1,7 @@
+artifact_location: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010
+creation_time: 1775391439851
+experiment_id: '886140843524171010'
+last_update_time: 1775391439851
+lifecycle_stage: active
+name: stock_movement_hpt
+workspace: default

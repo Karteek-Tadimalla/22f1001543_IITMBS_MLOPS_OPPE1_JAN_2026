@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/90d9477b1c3e4dfe98a68a7920ebb246/artifacts
+end_time: 1775392331066
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: 90d9477b1c3e4dfe98a68a7920ebb246
+run_name: adventurous-frog-471
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775392321181
+status: 3
+tags: []
+user_id: karteek_tadimalla

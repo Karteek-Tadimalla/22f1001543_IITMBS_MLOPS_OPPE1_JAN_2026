@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/d0b5aa6440664f0bb3ee0eb08945cea2/artifacts
+end_time: 1775391467104
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: d0b5aa6440664f0bb3ee0eb08945cea2
+run_name: defiant-steed-687
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775391460794
+status: 3
+tags: []
+user_id: karteek_tadimalla

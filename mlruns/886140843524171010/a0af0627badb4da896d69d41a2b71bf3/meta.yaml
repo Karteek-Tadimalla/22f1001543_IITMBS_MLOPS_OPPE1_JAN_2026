@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/a0af0627badb4da896d69d41a2b71bf3/artifacts
+end_time: 1775391460792
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: a0af0627badb4da896d69d41a2b71bf3
+run_name: resilient-doe-505
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775391454837
+status: 3
+tags: []
+user_id: karteek_tadimalla

@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/ea0f3caeb2b44a2a988052a88a35b62f/artifacts
+end_time: 1775391757691
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: ea0f3caeb2b44a2a988052a88a35b62f
+run_name: burly-squid-978
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775391745906
+status: 3
+tags: []
+user_id: karteek_tadimalla

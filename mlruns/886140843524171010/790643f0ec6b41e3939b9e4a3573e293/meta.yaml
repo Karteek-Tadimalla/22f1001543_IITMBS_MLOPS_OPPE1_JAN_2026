@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/790643f0ec6b41e3939b9e4a3573e293/artifacts
+end_time: 1775392390655
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: 790643f0ec6b41e3939b9e4a3573e293
+run_name: selective-shad-741
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775392378363
+status: 3
+tags: []
+user_id: karteek_tadimalla

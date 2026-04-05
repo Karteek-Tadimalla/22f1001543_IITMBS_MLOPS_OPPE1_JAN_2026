@@ -1,0 +1,26 @@
+
+M
+-
+__dummy"
+__dummy_idJstock_movement_project
+Ÿ–ÉÎÈ‘³ŸŸ–ÉÎÈ‘³Ÿ
+P
+0
+
+stock_name"
+stock_nameJstock_movement_project
+Ÿ–ÉÎ°õ¾ŸŸ–ÉÎ°õ¾Ÿ1"$f5444ead-42ab-4b7b-8a2f-4bb83209b6a8*ÅšÉÎĞÆ´2Ô
+³
+stock_featuresstock_movement_project
+stock_name"
+rolling_avg_10"
+volume_sum_102€†°–:»	timestampZ,*data/processed/feature_repo_source.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢*data/processed/feature_repo_source.parquet’Ÿ–ÉÎè‰ğ"Ÿ–ÉÎØ§œŸ@b
+
+stock_name
+Ÿ–ÉÎğ•ÉŸŸ–ÉÎğ•ÉŸRµ
+²
+,feast.infra.online_stores.sqlite.SqliteTable"
+X/home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/feast_repo/data/online.db%stock_movement_project_stock_featuresbÔ	timestampZ,*data/processed/feature_repo_source.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢*data/processed/feature_repo_source.parquetªstock_movement_project’Ÿ–ÉÎè‰ğ"Ÿ–ÉÎØ§œŸŠ8
+
+stock_movement_project
+Ÿ–ÉÎğÌºŸ–ÉÎğÌº

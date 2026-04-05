@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/320048ff4bd24bd898dd96562c9e7ed3/artifacts
+end_time: 1775392537771
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: 320048ff4bd24bd898dd96562c9e7ed3
+run_name: debonair-bird-327
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775392521487
+status: 3
+tags: []
+user_id: karteek_tadimalla

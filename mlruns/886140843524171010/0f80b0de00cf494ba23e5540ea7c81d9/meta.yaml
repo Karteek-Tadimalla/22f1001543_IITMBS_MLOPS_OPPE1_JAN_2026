@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/0f80b0de00cf494ba23e5540ea7c81d9/artifacts
+end_time: 1775391674884
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: 0f80b0de00cf494ba23e5540ea7c81d9
+run_name: serious-vole-230
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775391663841
+status: 3
+tags: []
+user_id: karteek_tadimalla

@@ -1,0 +1,23 @@
+artifact_path: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/models/m-f4bb777fed524714a62dee5b97d8aa00/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.3
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.10.1
+model_id: m-f4bb777fed524714a62dee5b97d8aa00
+model_size_bytes: 916237
+model_uuid: m-f4bb777fed524714a62dee5b97d8aa00
+prompts: null
+run_id: e8a35b27281e49d98bad8a73ee177132
+utc_time_created: '2026-04-05 12:34:13.785505'

@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/d28dd8e1056041dc84885c9949b67191/artifacts
+end_time: 1775391492459
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: d28dd8e1056041dc84885c9949b67191
+run_name: resilient-grouse-730
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775391485993
+status: 3
+tags: []
+user_id: karteek_tadimalla

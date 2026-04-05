@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/2a5e6d3f490a42a7b36368a2324efbcc/artifacts
+end_time: 1775392321178
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: 2a5e6d3f490a42a7b36368a2324efbcc
+run_name: dazzling-mink-517
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775392311525
+status: 3
+tags: []
+user_id: karteek_tadimalla

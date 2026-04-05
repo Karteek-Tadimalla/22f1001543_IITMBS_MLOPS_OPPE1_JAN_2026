@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/4490d09293874eaf94d3cf08445a70da/artifacts
+end_time: 1775391564658
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: 4490d09293874eaf94d3cf08445a70da
+run_name: gentle-tern-228
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775391556670
+status: 3
+tags: []
+user_id: karteek_tadimalla

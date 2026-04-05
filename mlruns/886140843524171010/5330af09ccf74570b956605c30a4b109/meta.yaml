@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/5330af09ccf74570b956605c30a4b109/artifacts
+end_time: 1775391448683
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: 5330af09ccf74570b956605c30a4b109
+run_name: flawless-mole-769
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775391440566
+status: 3
+tags: []
+user_id: karteek_tadimalla

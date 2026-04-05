@@ -1,0 +1,10 @@
+artifact_location: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/models/m-466a0671aada4b37a0163e0b3d5d4035/artifacts
+creation_timestamp: 1775391628668
+experiment_id: '886140843524171010'
+last_updated_timestamp: 1775391632589
+model_id: m-466a0671aada4b37a0163e0b3d5d4035
+model_type: null
+name: model
+source_run_id: d934c1c6dd354a53a2477863cf61c11e
+status: 2
+status_message: null

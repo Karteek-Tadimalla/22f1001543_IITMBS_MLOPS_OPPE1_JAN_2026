@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/3fb96433983d45a89ba399fb3e4857f0/artifacts
+end_time: 1775392521484
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: 3fb96433983d45a89ba399fb3e4857f0
+run_name: capable-rook-92
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775392505186
+status: 3
+tags: []
+user_id: karteek_tadimalla

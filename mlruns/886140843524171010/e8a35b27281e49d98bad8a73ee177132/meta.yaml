@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/e8a35b27281e49d98bad8a73ee177132/artifacts
+end_time: 1775392457709
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: e8a35b27281e49d98bad8a73ee177132
+run_name: caring-koi-192
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775392442267
+status: 3
+tags: []
+user_id: karteek_tadimalla

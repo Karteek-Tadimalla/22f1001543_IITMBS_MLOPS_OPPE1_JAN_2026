@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/570307c028f4466aa9035ac8b4857c2b/artifacts
+end_time: 1775392301532
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: 570307c028f4466aa9035ac8b4857c2b
+run_name: tasteful-toad-876
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775392292540
+status: 3
+tags: []
+user_id: karteek_tadimalla

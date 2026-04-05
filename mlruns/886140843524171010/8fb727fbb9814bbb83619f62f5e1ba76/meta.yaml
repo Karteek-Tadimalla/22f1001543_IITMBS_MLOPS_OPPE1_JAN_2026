@@ -1,0 +1,14 @@
+artifact_uri: file:///home/karteek_tadimalla/22f1001543_IITMBS_MLOPS_OPPE1_JAN_2026/mlruns/886140843524171010/8fb727fbb9814bbb83619f62f5e1ba76/artifacts
+end_time: 1775392365945
+entry_point_name: ''
+experiment_id: '886140843524171010'
+lifecycle_stage: active
+run_id: 8fb727fbb9814bbb83619f62f5e1ba76
+run_name: flawless-frog-256
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775392354326
+status: 3
+tags: []
+user_id: karteek_tadimalla
