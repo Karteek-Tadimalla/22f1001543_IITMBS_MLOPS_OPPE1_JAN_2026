@@ -1,6 +1,6 @@
 import os
 import json
-import mlflow
+import joblib
 import pandas as pd
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 
@@ -15,23 +15,7 @@ def main():
     y = df["target"]
     X = df.drop(columns=["target"])
 
-    tracking_uri = os.environ.get("MLFLOW_TRACKING_URI", "mlruns")
-    mlflow.set_tracking_uri(tracking_uri)
-
-    runs = mlflow.search_runs(
-        search_all_experiments=True,
-        order_by=["metrics.f1_score DESC"],
-    )
-
-    if runs.empty:
-        raise RuntimeError("No MLflow runs found when searching with tracking URI "
-                           f"{mlflow.get_tracking_uri()}")
-
-    best_run = runs.iloc[0]
-    best_run_id = best_run["run_id"]
-
-    model_uri = f"runs:/{best_run_id}/model"
-    model = mlflow.pyfunc.load_model(model_uri)
+    model = joblib.load("models/best_model.joblib")
 
     preds = model.predict(X)
 
@@ -41,7 +25,6 @@ def main():
     recall = recall_score(y, preds)
 
     metrics = {
-        "best_run_id": best_run_id,
         "accuracy": accuracy,
         "f1_score": f1,
         "precision": precision,
@@ -53,7 +36,6 @@ def main():
 
     with open(OUT_MD, "w") as f:
         f.write("# CI Evaluation Report\n\n")
-        f.write(f"- Best run id: `{best_run_id}`\n")
         f.write(f"- Accuracy: `{accuracy:.4f}`\n")
         f.write(f"- F1 score: `{f1:.4f}`\n")
         f.write(f"- Precision: `{precision:.4f}`\n")
