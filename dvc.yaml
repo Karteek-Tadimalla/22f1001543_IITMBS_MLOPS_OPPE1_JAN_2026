@@ -1,0 +1,43 @@
+stages:
+  prepare_v0:
+    cmd: python src/prepare_data.py --v0_dir data/raw/v0 --out_dir data/processed/v0
+    deps:
+      - src/prepare_data.py
+      - data/raw/v0
+    outs:
+      - data/processed/v0
+
+  prepare_v0_v1:
+    cmd: python src/prepare_data.py --v0_dir data/raw/v0 --v1_dir data/raw/v1 --out_dir data/processed/v0_v1
+    deps:
+      - src/prepare_data.py
+      - data/raw/v0
+      - data/raw/v1
+    outs:
+      - data/processed/v0_v1
+
+  build_features_v0:
+    cmd: python src/build_features.py --input_parquet data/processed/v0/train.parquet --output_parquet feast_repo/data/processed/feature_repo_source.parquet
+    deps:
+      - src/build_features.py
+      - data/processed/v0/train.parquet
+    outs:
+      - feast_repo/data/processed/feature_repo_source.parquet
+
+  train_v0:
+    cmd: python src/train.py --train_path data/processed/v0/train.parquet --test_path data/processed/v0/test.parquet --artifacts_dir reports/v0
+    deps:
+      - src/train.py
+      - data/processed/v0/train.parquet
+      - data/processed/v0/test.parquet
+    outs:
+      - reports/v0
+
+  train_v0_v1:
+    cmd: python src/train.py --train_path data/processed/v0_v1/train.parquet --test_path data/processed/v0_v1/test.parquet --artifacts_dir reports/v0_v1
+    deps:
+      - src/train.py
+      - data/processed/v0_v1/train.parquet
+      - data/processed/v0_v1/test.parquet
+    outs:
+      - reports/v0_v1
