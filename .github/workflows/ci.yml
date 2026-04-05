@@ -1,0 +1,63 @@
+name: CI Main with CML
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  evaluate-and-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Setup CML
+        uses: iterative/setup-cml@v2
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Set MLflow tracking URI
+        run: echo "MLFLOW_TRACKING_URI=file:./mlruns" >> $GITHUB_ENV
+
+      - name: Pull DVC data
+        run: dvc pull
+
+      - name: Run sanity checks
+        run: |
+          python src/ci_sanity_checks.py \
+            --test_path data/processed/v0/test.parquet \
+            --out_json reports/ci_sanity.json
+
+      - name: Evaluate best model
+        run: |
+          python src/ci_evaluate.py \
+            --test_path data/processed/v0/test.parquet \
+            --model_uri "runs:/9044d086472e40ce8cfe98c61428fd2d/model" \
+            --metrics_out reports/ci_metrics.json \
+            --report_out reports/cml_report.md \
+            --preds_out reports/ci_predictions.parquet
+
+      - name: Append sanity checks to report
+        run: |
+          echo "" >> reports/cml_report.md
+          echo "## Sanity checks" >> reports/cml_report.md
+          cat reports/ci_sanity.json >> reports/cml_report.md
+
+      - name: Create CML comment
+        if: github.event_name == 'pull_request'
+        env:
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: cml comment create --publish reports/cml_report.md
